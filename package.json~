@@ -1,0 +1,36 @@
+{
+  "name": "stagepool",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "wsmlby <wsmlby@gmail.com>",
+  "description": "A common pool to maintain multi-stages",
+  "contributors": [ 
+    {
+      "name": "wsmlby",
+      "email": "wsmlby@gmail.com"
+    } 
+  ],
+  "script":{
+	"test":"node ./test/test.js"
+  },
+  "main": "./lib/pool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wsmlby/pool.git"
+  },
+  "keywords": [
+    "pool",
+    "stage"
+  ],
+  "dependencies" : {
+  },
+  "analyze": false,
+  "devDependencies": {
+  },
+  "bundledDependencies": [
+  ],  
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.1"
+  }
+}

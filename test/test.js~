@@ -1,0 +1,3 @@
+//var p=require("../lib/pool");
+//new P({stages:{"start"}});
+console.log("start");

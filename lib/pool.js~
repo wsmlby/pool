@@ -1,0 +1,45 @@
+Array.prototype.remove=function(index){
+    return this.slice(0,index).concat(this.slice(index+1));
+}
+var Pool=function(options){
+    for(var i=0;i<options.stages.length;i++){
+        this.stage[options.stages[i]]=[];
+    }
+}
+
+Pool.prototype.add=function(obj,stage){
+    if (stage in this.stages){
+        this.stages[stage].unshift(obj);
+        return true;
+    }
+    return false;
+}
+Pool.prototype.remove=function(obj,stage){
+    if(stage in this.stages ){
+        var s=this.stages[stage];
+        for(var i=0;i<s.length;i++){
+            if(s[i]==obj){
+                this.stages[stage]=s.remove(i);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+Pool.prototype.move=function(obj,stage1,stage2){
+    if(stage1 in this.stages && stage2 in this.stages){
+        if(this.remove(obj,stage1)){
+            return this.add(obj,stage2);
+        }
+    }
+    return false;
+}
+Pool.prototype.getFrom=function(stage){
+    if(stage in this.stages){
+        if(this.stages[stage].length>0){
+            return this.stages[stage].pop();
+        }
+    }
+    return null;
+}
+exports.Pool=Pool;
