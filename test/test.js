@@ -9,9 +9,12 @@ p.add(c,"start");
 p.add(a,"start");
 console.log(p.getFrom("start"));
 console.log(p.getFrom("end"));
+console.log(p.size("start"));
 p.move(p.getFrom("start"),"start","end");
 console.log(p.getFrom("start"));
+console.log(p.size("start"));
 console.log(p.getFrom("end"));
+console.log(p.size("start"));
 //console.log(p.popFrom("start"));
 
 
