@@ -1,7 +1,7 @@
 {
   "name": "stagepool",
   "preferGlobal": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "wsmlby <wsmlby@gmail.com>",
   "description": "A common pool to maintain multi-stages",
   "contributors": [ 
